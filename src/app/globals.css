@@ -1,0 +1,59 @@
+
+@import "tailwindcss";
+
+body {
+  background: radial-gradient(ellipse at top, #f9d423 0%, #ff4e50 100%);
+  color: #333;
+  font-family: var(--font-geist-sans), sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Hide confetti overflow */
+}
+
+.shasha-image {
+  border-radius: 50%; /* This will create an ellipse on a rectangle */
+  width: 84vw; /* 84% of viewport width on mobile */
+  height: 65vw; /* Adjusted for an elliptical shape */
+  max-width: 420px; /* Max size on desktop */
+  max-height: 320px; /* Adjusted for an elliptical shape */
+  object-fit: cover; /* Fill the new shape */
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1, p, h2 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
