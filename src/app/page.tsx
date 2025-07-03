@@ -9,7 +9,12 @@ export default function Home() {
 
   const calculateTimeLeft = () => {
     const difference = +new Date('2025-07-06T00:00:00') - +new Date();
-    let timeLeft = {};
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
 
     if (difference > 0) {
       timeLeft = {
@@ -28,7 +33,9 @@ export default function Home() {
   useEffect(() => {
     // Set window size on mount
     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+  }, []); // Empty dependency array to run only once
 
+  useEffect(() => {
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
