@@ -10,6 +10,15 @@ import InfoPanel from './InfoPanel';
 import Orbit from './Orbit';
 import { planetData } from '@/planetData';
 
+interface ApiPlanet {
+  englishName: string;
+  meanAnomaly: number;
+}
+
+interface ApiResponse {
+  bodies: ApiPlanet[];
+}
+
 export default function SolarSystem() {
   const [planets, setPlanets] = useState<PlanetType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -20,15 +29,14 @@ export default function SolarSystem() {
       setIsLoading(true);
       try {
         const response = await fetch('https://api.le-systeme-solaire.net/rest/bodies?data=semimajorAxis,meanAnomaly&filter[]=isPlanet,eq,true');
-        const data = await response.json();
+        const data: ApiResponse = await response.json();
         
         const updatedPlanets = planetData.map(p => {
-          const apiPlanet = data.bodies.find((b: any) => b.englishName.toLowerCase() === p.name.toLowerCase());
+          const apiPlanet = data.bodies.find(b => b.englishName.toLowerCase() === p.name.toLowerCase());
           if (apiPlanet) {
             const initialAngle = apiPlanet.meanAnomaly * (Math.PI / 180);
             return { ...p, initialAngle };
           }
-          // Fallback for planets not found in API
           return { ...p, initialAngle: Math.random() * 2 * Math.PI };
         });
         setPlanets(updatedPlanets);

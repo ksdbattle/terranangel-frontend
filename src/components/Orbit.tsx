@@ -1,5 +1,4 @@
-'use client';
-
+import { Line } from '@react-three/drei';
 import * as THREE from 'three';
 import { useMemo } from 'react';
 
@@ -16,20 +15,9 @@ export default function Orbit({ distance }: OrbitProps) {
       false,            // aClockwise
       0                 // aRotation
     );
-    return curve.getPoints(128);
+    // Convert Vector2 to Vector3 for the Line component
+    return curve.getPoints(128).map(p => new THREE.Vector3(p.x, 0, p.y));
   }, [distance]);
 
-  return (
-    <line>
-      <bufferGeometry attach="geometry">
-        <bufferAttribute
-          attach="attributes-position"
-          count={points.length}
-          array={new Float32Array(points.flatMap(p => [p.x, 0, p.y]))}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <lineBasicMaterial attach="material" color="#333" linewidth={1} />
-    </line>
-  );
+  return <Line points={points} color="#444" lineWidth={1} />;
 }
