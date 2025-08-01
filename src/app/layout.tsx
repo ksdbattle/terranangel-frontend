@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { VT323 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const vt323 = VT323({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "Happy Launch Day, Shasha!",
-  description: "A special birthday mission countdown for a future Martian.",
+  title: "Solar System Explorer",
+  description: "A cyberpunk-themed solar system explorer.",
 };
 
 export default function RootLayout({
@@ -24,11 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={vt323.className}>{children}</body>
     </html>
   );
 }

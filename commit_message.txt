@@ -1,1 +1,1 @@
-Initial commit
+Fix: Resolve TypeScript type error and useEffect warning in page.tsx
