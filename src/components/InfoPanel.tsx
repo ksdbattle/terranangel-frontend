@@ -1,14 +1,10 @@
 'use client';
 
+import { PlanetType } from '@/types';
 import { motion } from 'framer-motion';
 
 interface InfoPanelProps {
-  planet: {
-    name: string;
-    radius: number;
-    distance: number;
-    color: string;
-  };
+  planet: PlanetType;
   onClose: () => void;
 }
 

@@ -1,14 +1,11 @@
 'use client';
 
+import { PlanetType } from '@/types';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-interface PlanetProps {
-  name: string;
-  radius: number;
-  distance: number;
-  color: string;
+interface PlanetProps extends PlanetType {
   onClick: () => void;
 }
 

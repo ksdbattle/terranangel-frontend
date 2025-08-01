@@ -1,4 +1,6 @@
-export const planetData = [
+import { PlanetType } from './types';
+
+export const planetData: PlanetType[] = [
   {
     name: 'Mercury',
     radius: 0.38,

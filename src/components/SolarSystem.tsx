@@ -1,5 +1,6 @@
 'use client';
 
+import { PlanetType } from '@/types';
 import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
@@ -9,7 +10,7 @@ import InfoPanel from './InfoPanel';
 import { planetData } from '@/planetData';
 
 export default function SolarSystem() {
-  const [selectedPlanet, setSelectedPlanet] = useState(null);
+  const [selectedPlanet, setSelectedPlanet] = useState<PlanetType | null>(null);
 
   return (
     <>
