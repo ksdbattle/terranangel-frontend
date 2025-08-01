@@ -12,7 +12,7 @@ interface PlanetProps {
   onClick: () => void;
 }
 
-export default function Planet({ name, radius, distance, color, onClick }: PlanetProps) {
+export default function Planet({ name: _name, radius, distance, color, onClick }: PlanetProps) {
   const meshRef = useRef<THREE.Mesh>(null!);
 
   useFrame(({ clock }) => {
