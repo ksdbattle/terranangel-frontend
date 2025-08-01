@@ -3,4 +3,9 @@ export interface PlanetType {
   radius: number;
   distance: number;
   color: string;
+  ring?: {
+    innerRadius: number;
+    outerRadius: number;
+    color: string;
+  };
 }

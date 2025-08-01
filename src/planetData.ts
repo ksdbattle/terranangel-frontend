@@ -25,4 +25,33 @@ export const planetData: PlanetType[] = [
     distance: 15,
     color: '#FF4500',
   },
+  {
+    name: 'Jupiter',
+    radius: 4.5, // Adjusted for visualization
+    distance: 25,
+    color: '#D2B48C',
+  },
+  {
+    name: 'Saturn',
+    radius: 3.8, // Adjusted for visualization
+    distance: 38,
+    color: '#F5DEB3',
+    ring: {
+      innerRadius: 5,
+      outerRadius: 7,
+      color: '#B0A084',
+    },
+  },
+  {
+    name: 'Uranus',
+    radius: 2.0, // Adjusted for visualization
+    distance: 50,
+    color: '#ADD8E6',
+  },
+  {
+    name: 'Neptune',
+    radius: 1.9, // Adjusted for visualization
+    distance: 60,
+    color: '#4169E1',
+  },
 ];

@@ -14,19 +14,19 @@ export default function SolarSystem() {
 
   return (
     <>
-      <Canvas>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[0, 0, 0]} />
+      <Canvas camera={{ position: [0, 40, 80], fov: 45 }}>
+        <ambientLight intensity={0.1} />
+        <pointLight position={[0, 0, 0]} intensity={2.5} color="#ffdcb4" />
         <mesh>
-          <sphereGeometry args={[2, 32, 32]} />
-          <meshStandardMaterial color="yellow" />
+          <sphereGeometry args={[2.5, 32, 32]} />
+          <meshStandardMaterial color="#ffdcb4" emissive="#ffdcb4" emissiveIntensity={0.8} />
         </mesh>
-        <OrbitControls />
-        {planetData.map((planet, index) => (
-          <Planet key={index} {...planet} onClick={() => setSelectedPlanet(planet)} />
+        <OrbitControls enablePan={false} minDistance={10} maxDistance={150} />
+        {planetData.map((planet) => (
+          <Planet key={planet.name} {...planet} onClick={() => setSelectedPlanet(planet)} />
         ))}
         <EffectComposer>
-          <Bloom intensity={0.6} kernelSize={3} luminanceThreshold={0} luminanceSmoothing={0.9} />
+          <Bloom intensity={1.2} kernelSize={3} luminanceThreshold={0.1} luminanceSmoothing={0.9} />
         </EffectComposer>
       </Canvas>
       {selectedPlanet && <InfoPanel planet={selectedPlanet} onClose={() => setSelectedPlanet(null)} />}
