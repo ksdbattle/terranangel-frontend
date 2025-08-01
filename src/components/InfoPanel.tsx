@@ -5,10 +5,9 @@ import { motion } from 'framer-motion';
 
 interface InfoPanelProps {
   planet: PlanetType;
-  onClose: () => void;
 }
 
-export default function InfoPanel({ planet, onClose }: InfoPanelProps) {
+export default function InfoPanel({ planet }: InfoPanelProps) {
   return (
     <motion.div
       initial={{ x: '100%' }}
@@ -32,17 +31,6 @@ export default function InfoPanel({ planet, onClose }: InfoPanelProps) {
       <h2 style={{ textShadow: '0 0 5px #0ff' }}>{planet.name}</h2>
       <p>Radius: {planet.radius}</p>
       <p>Distance from Sun: {planet.distance}</p>
-      <button 
-        onClick={onClose}
-        style={{
-          background: '#0ff',
-          border: 'none',
-          color: '#000',
-          padding: '0.5rem 1rem',
-          cursor: 'pointer',
-          fontFamily: 'VT323, monospace',
-        }}
-      >Close</button>
     </motion.div>
   );
 }
