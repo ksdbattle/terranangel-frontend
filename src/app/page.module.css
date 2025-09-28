@@ -80,3 +80,18 @@
   line-height: 1.8;
   font-style: italic;
 }
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
+  }
+
+  .subIntro {
+    font-size: 0.9rem;
+    margin: 1.5rem 1rem;
+  }
+}
