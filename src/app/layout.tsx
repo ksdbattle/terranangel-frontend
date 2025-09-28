@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { VT323 } from "next/font/google";
+import { Orbitron } from "next/font/google";
 import "./globals.css";
 
-const vt323 = VT323({ subsets: ["latin"], weight: "400" });
+const orbitron = Orbitron({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Solar System Explorer",
-  description: "A cyberpunk-themed solar system explorer.",
+  title: "TerranAngel™",
+  description: "Angel on Earth, guarding dreams and creativity.",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={vt323.className}>{children}</body>
+      <body className={orbitron.className}>{children}</body>
     </html>
   );
 }
