@@ -1,4 +1,5 @@
 import styles from './ModuleGrid.module.css';
+import Link from 'next/link';
 
 const modules = [
   {
@@ -37,10 +38,10 @@ export default function ModuleGrid() {
   return (
     <div className={styles.grid}>
       {modules.map((module) => (
-        <div key={module.id} className={styles.card}>
+        <Link key={module.id} href={`/${module.id}`} className={styles.card}>
           <h2>{module.title}</h2>
           <p>{module.description}</p>
-        </div>
+        </Link>
       ))}
     </div>
   );

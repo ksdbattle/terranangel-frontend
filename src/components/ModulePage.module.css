@@ -1,0 +1,54 @@
+.container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(180deg, rgba(10,20,30,0.9), rgba(5,10,15,0.85));
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.title {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  color: #e6f7ff;
+}
+
+.description {
+  margin: 0 0 1rem 0;
+  color: rgba(230,247,255,0.85);
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.back {
+  color: #9fe0ff;
+  text-decoration: none;
+}
+
+.cta {
+  background: #00aaff;
+  color: #00121a;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.content {
+  margin-top: 1.5rem;
+  color: rgba(255,255,255,0.85);
+}
+
+@media (max-width: 600px) {
+  .title { font-size: 1.5rem; }
+  .hero { padding: 1rem; }
+}

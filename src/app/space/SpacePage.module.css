@@ -1,0 +1,179 @@
+.container {
+  color: #fff;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #a0aec0;
+}
+
+.timeline {
+  margin-top: 4rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 4rem;
+  position: relative;
+  width: 50%;
+}
+
+.timelineItem:nth-child(odd) {
+  align-self: flex-start;
+  padding-right: 4rem;
+  justify-content: flex-end;
+}
+
+.timelineItem:nth-child(even) {
+  align-self: flex-end;
+  padding-left: 4rem;
+}
+
+.timelineContent {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timelineItem:nth-child(odd)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 4px solid #1a202c;
+  z-index: 1;
+}
+
+.timelineItem:nth-child(even)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 4px solid #1a202c;
+  z-index: 1;
+}
+
+.milestoneTitle {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #4a90e2; /* A nice blue for titles */
+}
+
+.milestoneDescription {
+  color: #a0aec0;
+  line-height: 1.6;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 4rem;
+  text-align: center;
+  width: 100%;
+  color: #a0aec0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: #fff;
+}
+
+/* Responsive: switch timeline to single-column on narrow screens */
+@media (max-width: 900px) {
+  /* Move the vertical line closer to left and stop centering transform */
+  .timeline::before {
+    left: 24px;
+    transform: none;
+  }
+
+  /* Full width timeline items stacked vertically */
+  .timelineItem {
+    width: 100%;
+    display: block;
+    margin-bottom: 2rem;
+    padding: 0 0 0 3rem;
+  }
+
+  /* Normalize odd/even behavior for single column */
+  .timelineItem:nth-child(odd),
+  .timelineItem:nth-child(even) {
+    padding-left: 3rem;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  /* Position the dot to the left of each item */
+  .timelineItem::after {
+    left: -12px;
+    right: auto;
+    top: 20px;
+  }
+
+  .timelineContent {
+    padding: 1.25rem;
+  }
+
+  /* Tweak typography for smaller screens */
+  .title {
+    font-size: 2.4rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+ 
