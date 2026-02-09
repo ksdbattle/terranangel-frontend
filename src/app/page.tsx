@@ -14,7 +14,7 @@ export default function HomePage() {
           className={styles.logo}
         />
         <h1 className={styles.title}>TerranAngel™</h1>
-        <p className={styles.slogan}>Pioneering the future, safeguarding innovation and humanity's dreams.</p>
+        <p className={styles.slogan}>Pioneering the future, safeguarding innovation and humanity&apos;s dreams.</p>
         <p className={styles.slogan}>Connecting technological frontiers across the cosmos.</p>
       </div>
 

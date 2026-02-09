@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect,  } from 'react';
 import ReactFlow, {
   MiniMap,
   Controls,
@@ -19,6 +19,7 @@ import ReactFlow, {
   ReactFlowProvider,
   Handle, // Added Handle import
   Position, // Added Position import
+  BackgroundVariant ,
 } from 'reactflow';
 
 import 'reactflow/dist/style.css';
@@ -550,7 +551,7 @@ const ALL_FRAMEWORKS_DATA: { name: string; meta: string; id: string }[] = [
   ];
 
 
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [nodes,, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(allEdges);
 
   const { setViewport } = useReactFlow();
@@ -590,7 +591,8 @@ const ALL_FRAMEWORKS_DATA: { name: string; meta: string; id: string }[] = [
     >
       <MiniMap />
       <Controls />
-      <Background variant="dots" gap={12} size={1} />
+      <Background variant={BackgroundVariant.Dots} gap={12} size={1} 
+/>
     </ReactFlow>
   );
 }
