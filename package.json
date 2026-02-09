@@ -12,11 +12,13 @@
     "@react-three/drei": "^10.6.1",
     "@react-three/fiber": "^9.3.0",
     "@react-three/postprocessing": "^3.0.4",
+    "elkjs": "^0.11.0",
     "framer-motion": "^12.23.12",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-confetti": "^6.4.0",
     "react-dom": "^19.0.0",
+    "reactflow": "^11.11.4",
     "three": "^0.178.0"
   },
   "devDependencies": {

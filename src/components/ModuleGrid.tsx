@@ -32,6 +32,16 @@ const modules = [
     title: 'Resources',
     description: 'Sustainable management and acquisition of global energy and materials.',
   },
+  {
+    id: 'blockchain',
+    title: 'Blockchain',
+    description: 'Exploring centralized and decentralized solar system public ledgers.',
+  },
+  {
+    id: 'transmission',
+    title: 'Transmission',
+    description: 'Communications, transport, and logistics.',
+  },
 ];
 
 export default function ModuleGrid() {

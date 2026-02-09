@@ -14,12 +14,12 @@ export default function HomePage() {
           className={styles.logo}
         />
         <h1 className={styles.title}>TerranAngel™</h1>
-        <p className={styles.slogan}>Angel on Earth, guarding dreams and creativity.</p>
-        <p className={styles.slogan}>The messenger connecting humanity and the future.</p>
+        <p className={styles.slogan}>Pioneering the future, safeguarding innovation and humanity's dreams.</p>
+        <p className={styles.slogan}>Connecting technological frontiers across the cosmos.</p>
       </div>
 
       <p className={styles.subIntro}>
-        Expanding civilization beyond the solar system to safeguard the precious fruits of nature, while advancing with the times.
+        Advancing civilization through innovation, from securing digital realms to exploring the vastness of space.
       </p>
 
       <ModuleGrid />
