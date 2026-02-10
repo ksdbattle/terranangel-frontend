@@ -1,0 +1,51 @@
+.overview {
+  margin-bottom: 1.25rem;
+  color: #cbd5e1;
+}
+
+.directions {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.directions h3 {
+  color: #9f7aea; /* accent */
+  margin-bottom: 0.75rem;
+}
+
+.directions ul {
+  list-style: disc inside;
+}
+
+.directions ul li h4 {
+  margin-bottom: 0.25rem;
+  color: #e2e8f0;
+}
+
+.ethics {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.01);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #a0aec0;
+}
+
+.aiDesign {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: linear-gradient(90deg, rgba(16,24,40,0.02), rgba(16,24,40,0.04));
+  border-radius: 8px;
+  border: 1px solid rgba(66,153,225,0.06);
+}
+
+.aiDesign h3 {
+  color: #60a5fa;
+}
+
+.aiDesign ul {
+  list-style: disc inside;
+}

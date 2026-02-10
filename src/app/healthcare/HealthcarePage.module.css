@@ -1,0 +1,51 @@
+.overview,
+.pediatrics,
+.wearables,
+.diagnostics,
+.therapeutics,
+.lifestyle,
+.assistive,
+.devices,
+.ethics {
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.overview p,
+.pediatrics p,
+.wearables p,
+.diagnostics p,
+.therapeutics p,
+.lifestyle p,
+.assistive p,
+.devices p,
+.ethics p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.diagnostics h3,
+.therapeutics h3 {
+  color: #e53e3e; /* accent for medical topics */
+}
+
+.assistive h3 {
+  color: #38b2ac; /* accent for assistive tech */
+}
+
+@media (max-width: 800px) {
+  .overview,
+  .pediatrics,
+  .wearables,
+  .diagnostics,
+  .therapeutics,
+  .lifestyle,
+  .assistive,
+  .devices,
+  .ethics {
+    padding: 0.75rem;
+  }
+}

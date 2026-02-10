@@ -1,0 +1,57 @@
+.overview,
+.majorCrops,
+.techniques,
+.processing,
+.sustainability,
+.future {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.overview h2,
+.majorCrops h3,
+.techniques h3,
+.processing h3,
+.sustainability h3,
+.future h3 {
+  color: #3cb371; /* Green accent */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.5rem;
+}
+
+.majorCrops ul,
+.techniques ul,
+.sustainability ul {
+  list-style: disc inside;
+  margin-left: 1.2rem;
+  color: #cbd5e1;
+}
+
+.majorCrops ul li h4,
+.techniques ul li h4,
+.sustainability ul li h4 {
+  color: #e6fffa;
+  margin-bottom: 0.4rem;
+}
+
+.processing p,
+.overview p,
+.future p {
+  color: #a0aec0;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .overview,
+  .majorCrops,
+  .techniques,
+  .processing,
+  .sustainability,
+  .future {
+    padding: 1rem;
+  }
+}

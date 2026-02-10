@@ -1,0 +1,63 @@
+.intro {
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+}
+
+.tableSection,
+.soilsSection,
+.oceanSection,
+.extrasolar,
+.conclusion {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.resourceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.resourceTable th,
+.resourceTable td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.06);
+  vertical-align: top;
+}
+
+.resourceTable th {
+  background: rgba(100, 180, 220, 0.05);
+  color: #e2e8f0;
+}
+
+.bodyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  background: rgba(255,255,255,0.01);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+@media (max-width: 900px) {
+  .bodyGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.conclusion p {
+  color: #a0aec0;
+}

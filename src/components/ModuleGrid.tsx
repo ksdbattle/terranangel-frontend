@@ -23,6 +23,11 @@ const modules = [
     description: 'Revolutionizing manufacturing, logistics, and industrial automation.',
   },
   {
+    id: 'agriculture',
+    title: 'Agriculture',
+    description: 'Sustainable crop systems, controlled-environment farming, and food security.',
+  },
+  {
     id: 'healthcare',
     title: 'Healthcare',
     description: 'Extending life and well-being through advanced medical technology.',

@@ -1,0 +1,49 @@
+.summary {
+  margin-bottom: 1rem;
+}
+
+.modelCompare {
+  margin: 1.5rem 0;
+}
+
+.disclaimer {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.compareTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compareTable th,
+.compareTable td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: left;
+}
+
+.compareTable th {
+  background: rgba(59,130,246,0.06);
+  color: #e2e8f0;
+}
+
+.agentMode {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: linear-gradient(90deg, rgba(2,6,23,0.02), rgba(2,6,23,0.03));
+  border-radius: 8px;
+  border: 1px solid rgba(66,153,225,0.05);
+}
+
+@media (max-width: 800px) {
+  .compareTable th,
+  .compareTable td {
+    padding: 0.5rem;
+  }
+}
