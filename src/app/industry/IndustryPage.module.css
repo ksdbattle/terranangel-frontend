@@ -1,0 +1,153 @@
+/* Base styles inherited from ModulePage or global styles */
+
+.overview, 
+.resourceHubs, 
+.industrialProcesses {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03); /* Slightly darker background for sections */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.overview h2,
+.resourceHubs h3,
+.industrialProcesses h3 {
+  color: #4a90e2; /* Consistent accent color */
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+.resourceHubs ul li,
+.industrialProcesses ul li {
+  margin-bottom: 1rem;
+  color: #a0aec0; /* Lighter text for details */
+}
+
+.resourceHubs ul li h4,
+.industrialProcesses ul li h4 {
+  color: #e2e8f0; /* Slightly brighter for sub-headings */
+  margin-bottom: 0.5rem;
+}
+
+/* Table Styles */
+.tableContainer {
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+.resourceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem; /* Slightly smaller font for table */
+  border-radius: 8px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensures border-radius applies to content */
+}
+
+.resourceTable th,
+.resourceTable td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: top; /* Align content to top */
+}
+
+.resourceTable th {
+  background-color: rgba(74, 144, 226, 0.1); /* Subtle header background */
+  color: #e2e8f0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.resourceTable tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03); /* Zebra striping for rows */
+}
+
+.resourceTable tbody tr:hover {
+  background-color: rgba(74, 144, 226, 0.15); /* Highlight on hover */
+}
+
+.resourceTable td:first-child {
+  font-weight: 500; /* Make celestial body names stand out */
+  color: #4a90e2;
+}
+
+/* Responsive adjustments for table */
+@media (max-width: 768px) {
+  .resourceTable thead {
+    display: none; /* Hide table header on small screens */
+  }
+
+  .resourceTable,
+  .resourceTable tbody,
+  .resourceTable tr,
+  .resourceTable td {
+    display: block; /* Make table elements stack */
+    width: 100%;
+  }
+
+  .resourceTable tr {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .resourceTable td {
+    text-align: right; /* Align text to the right */
+    padding-left: 50%; /* Make space for pseudo-element labels */
+    position: relative;
+    border: none; /* Remove borders for stacked view */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .resourceTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: calc(50% - 20px); /* Position label on the left */
+    padding-right: 10px;
+    font-weight: 600;
+    color: #e2e8f0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .resourceTable td:first-child {
+    font-weight: 700; /* Stronger weight for celestial body name */
+    color: #fff; /* Brighter color for primary label */
+    font-size: 1.1rem;
+    padding-top: 1rem;
+  }
+  .resourceTable td:first-child::before {
+     content: "Location"; /* Specific label for the first column */
+     color: #a0aec0;
+     font-size: 0.8rem;
+     font-weight: 500;
+  }
+
+  .resourceTable tbody tr:nth-child(even) {
+    background-color: transparent; /* Remove zebra striping for stacked cards */
+  }
+   .resourceTable tbody tr:hover {
+    background-color: transparent; /* Remove hover effect for stacked cards */
+  }
+}
+
+/* General styling for elements within sections */
+.overview p,
+.resourceHubs p,
+.industrialProcesses p {
+  color: #a0aec0;
+  line-height: 1.7;
+}
+
+.resourceHubs ul,
+.industrialProcesses ul {
+  list-style: disc inside;
+  margin-left: 1.5rem;
+}
